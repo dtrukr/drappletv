@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9052" systemVersion="15A284" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="hPb-x2-UgG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--DR TV-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChannelsViewController" customModule="drtv" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4HC-5b-trR">
+                                <rect key="frame" x="20" y="0.0" width="1880" height="1080"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RiR-mG-ZsO">
+                                    <size key="itemSize" width="400" height="400"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ujy-uQ-V8C" customClass="ChannelCollectionViewCell" customModule="drtv" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="145" width="400" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bZ9-0p-idV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="333.5"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-tJ-r6u">
+                                                    <rect key="frame" x="161" y="343" width="77" height="38.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="bZ9-0p-idV" firstAttribute="top" secondItem="ujy-uQ-V8C" secondAttribute="top" id="9V7-3E-9ft"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ckb-tJ-r6u" secondAttribute="bottom" constant="10" id="CoH-WB-IMG"/>
+                                            <constraint firstAttribute="trailing" secondItem="bZ9-0p-idV" secondAttribute="trailing" id="Crl-Il-yQE"/>
+                                            <constraint firstItem="ckb-tJ-r6u" firstAttribute="centerX" secondItem="ujy-uQ-V8C" secondAttribute="centerX" id="Xj2-Ab-DEv"/>
+                                            <constraint firstItem="bZ9-0p-idV" firstAttribute="leading" secondItem="ujy-uQ-V8C" secondAttribute="leading" id="i7c-QQ-xYg"/>
+                                            <constraint firstItem="ckb-tJ-r6u" firstAttribute="top" secondItem="bZ9-0p-idV" secondAttribute="bottom" constant="10" id="zAM-GX-kXi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="logoImageView" destination="bZ9-0p-idV" id="qjU-p0-H4i"/>
+                                            <outlet property="nameLabel" destination="ckb-tJ-r6u" id="Cmb-9q-CjQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Hte-Cw-rGR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oA8-CP-pmn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4HC-5b-trR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R3D-CZ-2dY"/>
+                            <constraint firstItem="4HC-5b-trR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mDu-kH-A4T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4HC-5b-trR" secondAttribute="bottom" id="miU-S3-5J7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4HC-5b-trR" secondAttribute="trailing" id="urx-st-Vuo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DR TV" id="5Gj-53-Lia"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4HC-5b-trR" id="Yp1-WT-GBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2437" y="366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u3o-Yb-XrB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPb-x2-UgG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KhD-tI-m4O">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sm4-3M-zhu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKi-Ll-AY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69" y="346"/>
+        </scene>
+    </scenes>
+</document>
